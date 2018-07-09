@@ -6,6 +6,7 @@ include: "*.dashboard.lookml"  # include all dashboards in this project
 
 explore: cups {}
 explore: players {}
+
 explore: matches {
   join: players {
     type: left_outer
