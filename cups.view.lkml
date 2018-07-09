@@ -1,6 +1,58 @@
 view: cups {
-  # # You can specify the table name if it's different from the view name:
-  # sql_table_name: my_schema_name.tester ;;
+  sql_table_name: world_cup.cups ;;
+
+  dimension: year {
+    type: date
+    sql: ${TABLE}.year ;;
+
+  }
+
+  dimension: country {
+    type: string
+    sql: ${TABLE}.country  ;;
+
+  }
+
+  dimension: winner {
+    type: string
+    sql: ${TABLE}.winner ;;
+  }
+
+  dimension: runners_up{
+    type: string
+    sql: ${TABLE}.Runners_Up ;;
+  }
+
+  dimension: Third {
+    type: string
+    sql: ${TABLE}.Third ;;
+  }
+
+  dimension: Fourth {
+    type: string
+    sql:${TABLE}.Fourth ;;
+  }
+
+  dimension: Goals_Scored {
+    type: number
+    sql: ${TABLE}.goalsscored ;;
+  }
+
+  dimension: Qualified_Teams {
+    type:  number
+    sql: ${TABLE}.qualifiedteams ;;
+  }
+
+  dimension: Matches_Played {
+    type: number
+    sql: ${TABLE}.matchesplayed ;;
+  }
+
+  dimension: Attendance {
+    type: number
+    sql: ${TABLE}.attendance ;;
+  }
+
   #
   # # Define your dimensions and measures here, like this:
   # dimension: user_id {
@@ -9,7 +61,7 @@ view: cups {
   #   sql: ${TABLE}.user_id ;;
   # }
   #
-  # dimension: lifetime_orders {
+  # dimension:  {
   #   description: "The total number of orders for each user"
   #   type: number
   #   sql: ${TABLE}.lifetime_orders ;;
@@ -27,6 +79,7 @@ view: cups {
   #   type: sum
   #   sql: ${lifetime_orders} ;;
   # }
+
 }
 
 # view: cups {
