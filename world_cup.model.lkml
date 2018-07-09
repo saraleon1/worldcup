@@ -4,7 +4,13 @@ include: "*.view.lkml"         # include all views in this project
 include: "*.dashboard.lookml"  # include all dashboards in this project
 
 
-explore: cups {}
+explore: cups {
+  join: matches {
+    type: left_outer
+    sql_on: ${cups.year} = ${matches.year} ;;
+    relationship: many_to_one
+  }
+}
 explore: players {}
 
 explore: matches {

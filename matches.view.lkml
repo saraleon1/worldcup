@@ -84,11 +84,13 @@ view: matches {
 
   dimension: roundID {
     type: number
+    label: "Round ID"
     sql: ${TABLE}.roundid ;;
   }
 
   dimension: matchid {
     type: number
+    label: "Match ID"
     sql: ${TABLE}.matchid ;;
   }
 
