@@ -1,12 +1,12 @@
 view: players {
   dimension: roundid {
     type: number
-    sql: ${TABLE}.round_id ;;
+    sql: ${TABLE}.roundid ;;
   }
 
   dimension: matchid {
     type: number
-    sql: ${TABLE}.match_id ;;
+    sql: ${TABLE}.matchid ;;
   }
 
   dimension: team_initials {
