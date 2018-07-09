@@ -1,69 +1,104 @@
 view: matches {
-  # # You can specify the table name if it's different from the view name:
-  # sql_table_name: my_schema_name.tester ;;
-  #
-  # # Define your dimensions and measures here, like this:
-  # dimension: user_id {
-  #   description: "Unique ID for each user that has ordered"
-  #   type: number
-  #   sql: ${TABLE}.user_id ;;
-  # }
-  #
-  # dimension: lifetime_orders {
-  #   description: "The total number of orders for each user"
-  #   type: number
-  #   sql: ${TABLE}.lifetime_orders ;;
-  # }
-  #
-  # dimension_group: most_recent_purchase {
-  #   description: "The date when each user last ordered"
-  #   type: time
-  #   timeframes: [date, week, month, year]
-  #   sql: ${TABLE}.most_recent_purchase_at ;;
-  # }
-  #
-  # measure: total_lifetime_orders {
-  #   description: "Use this for counting lifetime orders across many users"
-  #   type: sum
-  #   sql: ${lifetime_orders} ;;
-  # }
-}
 
-# view: matches {
-#   # Or, you could make this view a derived table, like this:
-#   derived_table: {
-#     sql: SELECT
-#         user_id as user_id
-#         , COUNT(*) as lifetime_orders
-#         , MAX(orders.created_at) as most_recent_purchase_at
-#       FROM orders
-#       GROUP BY user_id
-#       ;;
-#   }
-#
-#   # Define your dimensions and measures here, like this:
-#   dimension: user_id {
-#     description: "Unique ID for each user that has ordered"
-#     type: number
-#     sql: ${TABLE}.user_id ;;
-#   }
-#
-#   dimension: lifetime_orders {
-#     description: "The total number of orders for each user"
-#     type: number
-#     sql: ${TABLE}.lifetime_orders ;;
-#   }
-#
-#   dimension_group: most_recent_purchase {
-#     description: "The date when each user last ordered"
-#     type: time
-#     timeframes: [date, week, month, year]
-#     sql: ${TABLE}.most_recent_purchase_at ;;
-#   }
-#
-#   measure: total_lifetime_orders {
-#     description: "Use this for counting lifetime orders across many users"
-#     type: sum
-#     sql: ${lifetime_orders} ;;
-#   }
-# }
+  dimension: year {
+    type: number
+    sql: ${TABLE}.Year ;;
+
+  }
+
+  dimension: datetime {
+    type: string
+    sql: ${TABLE}.datetime  ;;
+
+  }
+
+  dimension: stage {
+    type: string
+    sql: ${TABLE}.stage ;;
+  }
+
+  dimension: stadium {
+    type: string
+    sql: ${TABLE}.stadium ;;
+  }
+
+  dimension: city {
+    type: string
+    sql: ${TABLE}.city ;;
+  }
+
+  dimension: home_team_name {
+    type: string
+    sql: ${TABLE}.home_team_name ;;
+  }
+
+  dimension: home_team_goals {
+    type: number
+    sql: ${TABLE}.home_team_goals ;;
+  }
+
+  dimension: away_team_name {
+    type: string
+    sql: ${TABLE}.away_team_name ;;
+  }
+
+  dimension: away_team_goals {
+    type: number
+    sql: ${TABLE}.away_team_goals ;;
+  }
+
+  dimension: win_conditions {
+    type: string
+    sql: ${TABLE}.win_conditions ;;
+  }
+
+  dimension: attendance {
+    type: number
+    sql: ${TABLE}.attendance ;;
+  }
+
+  dimension: half_time_home_goals {
+    type: number
+    sql: ${TABLE}.half_time_home_goals ;;
+  }
+
+  dimension: half_time_away_goals {
+    type: number
+    sql: ${TABLE}.half_time_away_goals ;;
+  }
+
+  dimension: referee {
+    type: string
+    sql: ${TABLE}.referee ;;
+  }
+
+  dimension: assistant_1 {
+    type: string
+    sql: ${TABLE}.assistant_1 ;;
+  }
+
+  dimension: assistant_2 {
+    type: string
+    sql: ${TABLE}.assistant_2 ;;
+  }
+
+  dimension: roundID {
+    type: number
+    sql: ${TABLE}.roundid ;;
+  }
+
+  dimension: matchid {
+    type: number
+    sql: ${TABLE}.matchid ;;
+  }
+
+  dimension: home_team_initials {
+    type: string
+    sql: ${TABLE}.home_team_initials ;;
+  }
+
+  dimension: away_team_initials {
+    type: string
+    sql: ${TABLE}.away_team_initials ;;
+  }
+ }

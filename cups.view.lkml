@@ -2,8 +2,8 @@ view: cups {
   sql_table_name: world_cup.cups ;;
 
   dimension: year {
-    type: date
-    sql: ${TABLE}.year ;;
+    type: number
+    sql: ${TABLE}.Year ;;
 
   }
 
@@ -49,7 +49,7 @@ view: cups {
   }
 
   dimension: Attendance {
-    type: number
+    type: string
     sql: ${TABLE}.attendance ;;
   }
 
