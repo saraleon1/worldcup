@@ -7,7 +7,7 @@ view: players {
 
   dimension: matchid {
     type: number
-    label: "Match ID"
+    label: "Match ID test change"
     sql: ${TABLE}.matchid ;;
   }
 
