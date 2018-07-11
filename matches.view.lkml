@@ -8,7 +8,7 @@ view: matches {
 
   dimension: datetime {
     type: string
-    label: "blah blah test"
+    label: "does it change?"
     sql: ${TABLE}.datetime  ;;
 
   }
