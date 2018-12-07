@@ -5,6 +5,7 @@ include: "*.dashboard.lookml"  # include all dashboards in this project
 
 
 explore: cups {
+  hidden: yes
   join: matches {
     type: left_outer
     sql_on: ${cups.year} = ${matches.year} ;;
